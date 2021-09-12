@@ -37,3 +37,4 @@ CI=False, refer to this [article](https://stackoverflow.com/questions/62415804/h
 1. Key: CI Value: False
 1. Redeploy with clearing cache.
  
+![CI=False setting on Netlify](./CIFalse.png)
