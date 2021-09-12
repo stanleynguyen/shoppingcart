@@ -15,6 +15,10 @@ export default function ProdForm(props) {
     setPage(page + pmvt);  //setPage may not finish updating page soon enough before stPostsPage begin
   }
 
+  React.useEffect(() => {
+      pageMvnt(0)
+  }, [page]);
+
   const getProds = (val) => 
     fetch(`${API_URL}?page=${val}&limit=${PAGESIZE}`).then((res) =>
       res.json()
@@ -22,9 +26,12 @@ export default function ProdForm(props) {
     
   const [prods, setProds] = React.useState(undefined);
 
-  const loadProds = (val) => {setIsLoading(true);getProds(val)
-            .then((data) => setProds(data))
-            .then(() => setIsLoading(false))};
+  const loadProds = (pageNo) => {
+        setIsLoading(true);
+        getProds(pageNo)
+        .then((data) => setProds(data))
+        .then(() => setIsLoading(false))
+    };
 
   const [key, setKey] = React.useState('');
   const [title, setTitle] = React.useState('');

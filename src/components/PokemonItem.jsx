@@ -11,8 +11,8 @@ export function PokemonItem({
           <h3 className='mt-6 text-gray-900 text-sm font-medium'>
             {name}
           </h3>
-          <dl class='mt-1 flex-grow flex flex-col justify-between'>
-            <dd class='text-gray-500 text-sm line-clamp-3'>{description}</dd>
+          <dl className='mt-1 flex-grow flex flex-col justify-between'>
+            <dd className='text-gray-500 text-sm line-clamp-3'>{description}</dd>
           </dl>
         </div>
       </li>
