@@ -1,7 +1,7 @@
 
  
 
-# Take Home Homework (Day 3) (1 of 2)
+# Take Home Homework (Day 3)
 
 Create a new application using Create React App:
 - When it first load, shows the login page: refers to https://transition-to-react-playground.vercel.app/login for how it look like
