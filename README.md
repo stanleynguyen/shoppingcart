@@ -32,7 +32,7 @@ During the deployment, there was one additional task required just because of Ne
 CI=False, refer to this [article](https://stackoverflow.com/questions/62415804/how-to-prevent-netlify-from-treating-warnings-as-errors-because-process-env-ci).
 
 1. On Netlify, go to Deploys -> [Deployment Settings](https://app.netlify.com/sites/confident-golick-a02a49/settings/deploys).
-1. There you will see Environment tab.
+1. Schroll down to see Environment tab.
 1. Click Environment Variables -> Edit Variables
 1. Key: CI Value: False
 1. Redeploy with clearing cache.
