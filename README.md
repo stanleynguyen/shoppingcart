@@ -17,10 +17,6 @@ You should use React styleguidist to documents your presentation components.
 
 Deploy the site and the styleguidist site to Netlify and submit the URLs together with the link to your repository.
  
-# SikOn's Remarks on Homework Submission
-The shoppingcart homework requires the React styleguidist be used.  However, as this app incorporates four homeworks, I have requested Stanley's permission
-to have React styleguidist used in day 4 homework [`movies`](http://github.com/encore428/movies) instead.
- 
 # Deployment
 
 The app has been deployed to Netlify as below:
