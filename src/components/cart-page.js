@@ -3,14 +3,13 @@ import { LoginForm, useAuthState } from "../domains/auth";
 
 import CartItem from "./cart-item"; 
 import CartLine from "./cart-line"; 
+const PAGESIZE = 6;
 
 const API_URL = "https://ecomm-service.herokuapp.com/marketplace"
 
 export default function CartPage(props) {
-  // const { page, setPage, jobs } = useJobs();
   const auth = useAuthState();
   
-  const PAGESIZE = 6;
   const [page, setPage] = React.useState(1);                 // initialise to page 1
   const [isLoading, setIsLoading] = React.useState(false);
   const [cartTotal, setCartTotal] = React.useState(0);
@@ -40,13 +39,19 @@ export default function CartPage(props) {
       throw new Error(res.statusText);
     });
 
-    React.useEffect(() => {
-        if (auth.status === "authenticated") {
-            getLines().then((data) => setLines(data));
-        } else {
-            setLines([]);
-        }
-    },[auth.status]);
+  React.useEffect(() => {
+    pageMvnt(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[page]);
+
+  React.useEffect(() => {
+    if (auth.status === "authenticated") {
+      getLines().then((data) => setLines(data));
+    } else {
+      setLines([]);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[auth.status]);
 
 
   const [prods, setProds] = React.useState([]);
@@ -54,12 +59,9 @@ export default function CartPage(props) {
 
   
   React.useEffect(() => {
-    console.log(lines);
     prods.forEach(prod => {
-        console.log(prod);
         prod.canAdd = true
         const inCart = lines.filter(line => line.listing._id === prod._id).map(line => [line.listing._id, line.quantity]);
-        console.log(inCart);
         if (inCart.length === 1) {
             if (prod.availability === 'single-item') {
                 prod.canAdd = false
@@ -70,12 +72,12 @@ export default function CartPage(props) {
             }
         };
     });
-},[lines, prods]);
+  },[lines, prods]);
 
       
   React.useEffect(() => {
     setCartTotal(lines.map(line => line.listing.price * line.quantity).reduce((prev, curr) => prev + curr,0))
-},[lines]);
+  },[lines]);
 
   const loadProds = (val) => {
       setIsLoading(true);
@@ -101,7 +103,7 @@ export default function CartPage(props) {
     })
     .then(() => getLines().then((data) => setLines(data)
     ));
-  };  
+};  
 
 
 const add2Cart = (id) => {  // (id) is the key to the post, delete the post
@@ -128,7 +130,7 @@ const add2Cart = (id) => {  // (id) is the key to the post, delete the post
 };  
 
 
-    return (
+return (
         <div className="bg-gray-50 lg:flex">
             {auth.status === "anonymous" && (
                 <LoginForm
@@ -288,7 +290,7 @@ const add2Cart = (id) => {  // (id) is the key to the post, delete the post
                             <div id="no-cart-item-message">
                                 <div className="p-4 text-center">
                                     <svg className="inline-block w-12 h-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                                     </svg>
                                 </div>
                                 <p className="text-center text-gray-500">There is no item in your shopping cart.</p>

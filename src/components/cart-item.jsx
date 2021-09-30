@@ -1,5 +1,5 @@
 import {ShoppingCartIcon} from "@heroicons/react/outline";
-
+import PropTypes from "prop-types";
 
 export default function CartItem(props) {
     return (
@@ -110,3 +110,14 @@ export default function CartItem(props) {
 
 
 )}
+
+CartItem.propTypes = {
+  key: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  price: PropTypes.number,
+  condition: PropTypes.oneOf(["new", "used_like-new", "used_good", "used_fair"]),
+  imageUrl: PropTypes.string,
+  availability: PropTypes.oneOf(["single-item", "in-stock"]),
+  numOfStock: PropTypes.number,
+};

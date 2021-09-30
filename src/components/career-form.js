@@ -38,6 +38,7 @@ export default function CareerForm(props) {
 
   const [page, setPage] = React.useState(1);                 // initialise to page 1
   const PAGESIZE = 5;
+  // eslint-disable-next-line no-unused-vars
   const [posts, setPosts] = React.useState(JSON.parse(JSON.stringify(postsInit)));  // declare posts and load data from static
                                                                                     // setPosts is not used because it does not
                                                                                     // update posts in time for other processes to

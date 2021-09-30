@@ -17,6 +17,7 @@ export default function ProdForm(props) {
 
   React.useEffect(() => {
       pageMvnt(0)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const getProds = (val) => 
@@ -258,7 +259,7 @@ export default function ProdForm(props) {
                             <input type="text" name="key" id="key" readOnly hidden value={key} />
 
                             <div>
-                                <label for="listing-title" className="block text-sm font-medium text-gray-900">
+                                <label htmlFor="listing-title" className="block text-sm font-medium text-gray-900">
                                     Title
                                 </label>
                                 <div className="mt-1">
@@ -277,7 +278,7 @@ export default function ProdForm(props) {
                             </div>
 
                             <div>
-                                <label for="listing-price" className="block text-sm font-medium text-gray-900">
+                                <label htmlFor="listing-price" className="block text-sm font-medium text-gray-900">
                                     Price
                                 </label>
                                 <div className="mt-1">
@@ -295,7 +296,7 @@ export default function ProdForm(props) {
                                 </div>
                             </div>
                             <div>
-                                <label for="description" className="block text-sm font-medium text-gray-900">Description</label>
+                                <label htmlFor="description" className="block text-sm font-medium text-gray-900">Description</label>
                                 <div className="mt-1">
                                     <textarea id="description" name="description" rows="4" required="" className="
                                             block
@@ -310,7 +311,7 @@ export default function ProdForm(props) {
                                 </div>
                             </div>
                             <div>
-                                <label for="listing-condition" className="block text-sm font-medium text-gray-900">
+                                <label htmlFor="listing-condition" className="block text-sm font-medium text-gray-900">
                                     Condition
                                 </label>
                                 <div className="mt-1">
@@ -339,7 +340,7 @@ export default function ProdForm(props) {
 
 
                             <div>
-                                <label for="listing-availability" className="block text-sm font-medium text-gray-900">
+                                <label htmlFor="listing-availability" className="block text-sm font-medium text-gray-900">
                                     Availability
                                 </label>
                                 <div className="mt-1">
@@ -365,7 +366,7 @@ export default function ProdForm(props) {
                             </div>
 
                             {availability!=='single-item' && (<div>
-                                <label for="num-of-stock" className="block text-sm font-medium text-gray-900">
+                                <label htmlFor="num-of-stock" className="block text-sm font-medium text-gray-900">
                                     Number of Available Stock
                                 </label>
                                 <div className="mt-1">
@@ -384,7 +385,7 @@ export default function ProdForm(props) {
                             </div>)}
 
                             <div>
-                                <label for="listing-imageUrl" className="block text-sm font-medium text-gray-900">
+                                <label htmlFor="listing-imageUrl" className="block text-sm font-medium text-gray-900">
                                     Image Url
                                 </label>
                                 <div className="mt-1">
