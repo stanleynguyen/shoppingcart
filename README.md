@@ -32,7 +32,7 @@ https://trusting-austin-c3dcde.netlify.app/
  
 # Special Notes
 
-During the deployment, there was one additional task required just because of Netlify:
+During the app deployment, there was one additional task required just because of Netlify:
 
 CI=False, refer to this [article](https://stackoverflow.com/questions/62415804/how-to-prevent-netlify-from-treating-warnings-as-errors-because-process-env-ci).
 
