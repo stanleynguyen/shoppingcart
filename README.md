@@ -23,6 +23,12 @@ The app has been deployed to Netlify as below:
 
 https://confident-golick-a02a49.netlify.app 
  
+The styleguidist site has been deployed to Netlify as below:
+
+https://trusting-austin-c3dcde.netlify.app/ 
+ 
+# Special Notes
+
 During the deployment, there was one additional task required just because of Netlify:
 
 CI=False, refer to this [article](https://stackoverflow.com/questions/62415804/how-to-prevent-netlify-from-treating-warnings-as-errors-because-process-env-ci).
