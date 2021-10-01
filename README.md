@@ -9,8 +9,8 @@ Create a new application using Create React App:
 - When there is no items, show empty message like this page: https://transition-to-react-playground.vercel.app/marketplace-empty
 
 Notes:
-- To add item to cart, use https://<your-service>.herokuapp.com/docs/#/marketplace/addCartItem
-- To get items in cart, use https://<your-service>.herokuapp.com/docs/#/marketplace/listCartItems
+- To add item to cart, use https://\<your-service>.herokuapp.com/docs/#/marketplace/addCartItem
+- To get items in cart, use https://\<your-service>.herokuapp.com/docs/#/marketplace/listCartItems
 - To remove item from cart, use https://<your-service>.herokuapp.com/docs/#/marketplace/removeCartItem
 
 You should use React styleguidist to documents your presentation components.
