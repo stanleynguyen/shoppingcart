@@ -3,6 +3,9 @@
 
 # Take Home Homework (Day 3)
 
+<a href="./Day 3 homework.pdf">Page 95 and 96</a> of Day 3 presentation slide sets out the framework for the Homework as below:
+
+
 Create a new application using Create React App:
 - When it first load, shows the login page: refers to https://transition-to-react-playground.vercel.app/login for how it look like
 - When user login successfully, shows the marketplace page.https://transition-to-react-playground.vercel.app/marketplace-mock
