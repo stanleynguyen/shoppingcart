@@ -25,6 +25,8 @@ Deploy the site and the styleguidist site to Netlify and submit the URLs togethe
 The app has been deployed to Netlify as below:
 
 https://confident-golick-a02a49.netlify.app 
+
+The app incorporated multiple homework.  For this shoppingCart functionality, it is accessible under the navigation item 'shopping' on top right.
  
 The styleguidist site has been deployed to Netlify as below:
 
